@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Project page for GAGS: Granularity-Aware 3D Feature Distillation for Gaussian Splatting">
+        content="Project page for LEGO: Leveled Language Gaussian Splatting">
   <meta name="keywords" content="3D Gaussian Splatting, CLIP, SAM, Granularity-Aware">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GAGS: Granularity-Aware 3D Feature Distillation for Gaussian Splatting</title>
+  <title>LEGO: Leveled Language Gaussian Splatting</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -63,7 +63,7 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://pz0826.github.io/GAGS/">
+          <a class="navbar-item" href="https://pz0826.github.io/GAGS-Webpage/">
             GAGS
           </a>
         </div>
@@ -79,18 +79,20 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">GAGS: Granularity-Aware 3D Feature Distillation for Gaussian Splatting</h1>
-          <h2 class="title is-3">AAAI-26</h2>
+          <h1 class="title is-1 publication-title">
+            <img src="./static/images/LEGO-logo.png" alt="LEGO" class="publication-title-logo">: Leveled Language Gaussian Splatting
+          </h1>
+          <h2 class="title is-3">ECCV 2026</h2>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://pz0826.github.io">Yuning Peng</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://hpwang-whu.github.io/">Haiping Wang</a><sup>1</sup>,</span>
+              <a href="https://hpwang-whu.github.io/">Haiping Wang</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://liuyuan-pal.github.io/">Yuan Liu</a><sup>2,4</sup>,
+              <a href="https://liuyuan-pal.github.io/">Yuan Liu</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a>Chenglu Wen</a><sup>3</sup>,
+              <a>Yipeng Lu</a><sup>1</sup>,
             </span>
             <span class="author-block">
               <a href="https://dongzhenwhu.github.io/index.html">Zhen Dong</a><sup>1</sup>,
@@ -102,21 +104,19 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Wuhan University,</span>
-            <span class="author-block"><sup>2</sup>Hong Kong University of Science and Technology,</span>
-            <span class="author-block"><sup>3</sup>Xiamen University,</span>
-            <span class="author-block"><sup>4</sup>Nanyang Technological University</span>
+            <span class="author-block"><sup>2</sup>Hong Kong University of Science and Technology</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2412.13654"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper</span>
+                  <span>Paper(Coming Soon)</span>
                 </a>
               </span>
               <!-- <span class="link-block">
@@ -140,22 +140,22 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/WHU-USI3DV/GAGS"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code(Coming Soon)</span>
                   </a>
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://drive.google.com/drive/folders/1_IbWgVgvnCy4jq9P5EcE6xS44ftcmtgq?usp=drive_link"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Data(Coming Soon)</span>
                   </a>
             </div>
 
@@ -169,14 +169,14 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video> -->
-      <img src="./static/images/teaser_v4.png" alt="teaser" width="100%">
+
+      <video id="teaser-video" autoplay muted loop playsinline width="100%">
+        <source src="./static/videos/LEGO-overview.mp4" type="video/mp4">
+      </video>
     
       <h2 class="subtitle has-text-centered">
-        GAGS learns a 3D Gaussian field associated with semantic features, which enables accurate open-vocabulary 3D visual grounding in the scene.
+        <b>TL;DR:</b> LEGO parsing scenes into a unified, level-wise semantic hierarchy, 
+        enabling automatic scene decomposition and multi-granular open-vocabulary understanding.
       </h2>
     </div>
   </div>
@@ -188,114 +188,33 @@
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
         <div>
-          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">" sun umbrella "</h3>
-          <div class="item item-sun_umbrella">
-            <video poster="" id="sun_umbrella" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/sun_umbrella.mp4"
-                      type="video/mp4">
-            </video>
+          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">bonsai</h3>
+          <div class="item item-bonsai">
+            <img src="./static/images/hero-cor-bonsai.png" alt="bonsai" width="100%">
           </div>
         </div>
         <div>
-          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">" wooden table "</h3>
-          <div class="item item-wooden_table">
-            <video poster="" id="wooden_table" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/wooden_table.mp4"
-                      type="video/mp4">
-            </video>
+          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">counter</h3>
+          <div class="item item-counter">
+            <img src="./static/images/hero-cor-counter.png" alt="counter" width="100%">
           </div>
         </div>
         <div>
-          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">" flowerpot with dried flowers "</h3>
-          <div class="item item-Flowerpot">
-            <video poster="" id="Flowerpot" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/flowerpot_with_dried_flowers.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-
-        <div>
-          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">" Settlers Catan " <em style="color: gray; font-size: 15px;">(name of book)</em></h3>
-          <div class="item item-Settlers_Catan">
-            <video poster="" id="Settlers_Catan" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/Settlers_Catan.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          
-        </div>
-        <div>
-          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">" purple notebook "</h3>
-          <div class="item item-purple_notebook">
-            <video poster="" id="purple_notebook" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/purple_notebook.mp4"
-                      type="video/mp4">
+          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">garden</h3>
+          <div class="item item-garden">
+            <img src="./static/images/hero-cor-garden.png" alt="garden" width="100%">
           </div>
         </div>
         <div>
-          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">" pink flower on the tree "</h3>
-          <div class="item item-pink_flower">
-            <video poster="" id="pink_flower" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/pink_flower_on_the_tree.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          
-        </div>
-        <div>
-          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">" LEGO base "</h3>
-          <div class="item item-LEGO_base">
-            <video poster="" id="LEGO_base" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/LEGO_base.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-          
-        </div>
-        <div>
-          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">" LEGO bonsai "</h3>
-          <div class="item item-LEGO_bonsai">
-            <video poster="" id="LEGO_bonsai" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/LEGO_bonsai.mp4"
-                      type="video/mp4">
-            </video>
+          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">kitchen</h3>
+          <div class="item item-kitchen">
+            <img src="./static/images/hero-cor-kitchen.png" alt="kitchen" width="100%">
           </div>
         </div>
         <div>
-          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">" bag of fusilli "</h3>
-          <div class="item item-fusilli">
-            <video poster="" id="fusilli" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/bag_of_fusilli.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div>
-          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">" knife "</h3>
-          <div class="item item-knife">
-            <video poster="" id="knife" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/knife.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div>
-          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">" Pringles "</h3>
-          <div class="item item-pringles">
-            <video poster="" id="pringles" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/Pringles.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-        </div>
-        <div>
-          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">" wooden bowl "</h3>
-          <div class="item item-wooden_bowl">
-            <video poster="" id="wooden_bowl" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/wooden_bowl.mp4"
-                      type="video/mp4">
-            </video>
+          <h3 class="subtitle has-text-centered" style="text-align: center; margin-bottom: 10px;">teatime</h3>
+          <div class="item item-teatime">
+            <img src="./static/images/hero-cor-teatime.png" alt="teatime" width="100%">
           </div>
         </div>
       </div>
@@ -312,25 +231,18 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            3D open-vocabulary scene understanding, which accurately perceives complex semantic 
-            properties of objects in space, has gained significant attention in recent years. 
+            We introduce LEGO for advanced open-vocabulary scene understanding.
+            Beyond basic concept recognition, its core innovation lies in capturing the intrinsic semantic hierarchies within the scene.
           </p>
           <p>
-            In this paper, we propose GAGS, a framework that distills 2D CLIP features into 3D Gaussian splatting, 
-            enabling open-vocabulary queries for renderings on arbitrary viewpoints. 
-            The main challenge of distilling 2D features for 3D fields lies in the multiview 
-            inconsistency of extracted 2D features, which provides unstable supervision for the 3D feature field.
+            While foundation models like SAM can identify multi-granular structures in 2D, their partitions are strictly perspective-bound and lack cross-view consensus.
+            LEGO self-adaptively re-grades volatile multi-view SAM granularities into a unified, 3D-consistent hierarchy. 
+            This provides precise supervision for the structurally coherent, multi-level segmentation of 3D scenes.
+            By grounding these segments with CLIP embeddings, LEGO recovers open-vocabulary semantic logic across hierarchical levels.
           </p>
           <p>
-            GAGS addresses this challenge with two novel strategies. 
-            First, GAGS associates the prompt point density of SAM with the camera distances, 
-            which significantly improves the multiview consistency of segmentation results. 
-            Second, GAGS further decodes a granularity factor to guide the distillation process and 
-            this granularity factor can be learned in a unsupervised manner 
-            to only select the multiview consistent 2D features in the distillation process. 
-            Experimental results on two datasets demonstrate significant performance and stability 
-            improvements of GAGS in visual grounding and semantic segmentation, 
-            with an inference speed 2 &times; faster than baseline methods.
+            Furthermore, by incorporating spatial relationships, we elevate these segments into level-wise language scene graphs, effectively empowering Large Language Models to perform complex, context-aware spatial reasoning and precise visual grounding.
+            Experimental results demonstrate that LEGO establishes new state-of-the-art performance across both promptable and open-vocabulary 3D segmentation benchmarks, exhibiting advanced hierarchical scene decomposition and context-aware spatial reasoning.
           </p>
         </div>
       </div>
@@ -347,43 +259,79 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
         <div class="colum">
+          <h2 class="title is-3">Why 3D Level?</h2>
+
+          <img src="./static/images/scale_vs_level.jpg" alt="Scale vs level" width="100%">
+          <br>
+          <br>
+          <div class="content has-text-justified">
+            <p>
+              Relying on absolute physical scales leads to "semantic-scale decoupling" because objects of the same class often vary in size. 
+              At a fixed scale, a large car might be segmented into multiple parts, while a smaller car remains entirely intact. 
+              This creates an unaligned and incomplete hierarchy that requires exhaustive manual tuning.
+            </p>
+            <p>
+              To build an accurate 3D semantic tree, LEGO shifts from manual physical scales to intrinsic structural levels. 
+              A structural level is a consistent compositional rank invariant to absolute size. 
+              As shown on the right, LEGO ensures both large and small cars are parsed into identical semantic tiers simultaneously, 
+              guaranteeing an aligned and intact hierarchy for automated reasoning.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="colum">
+          <h2 class="title is-3">3D Level Assignment</h2>
+
+          <img src="./static/images/mask_level_assign_v2.jpg" alt="Mask level assignment" width="100%">
+          <br>
+          <br>
+          <div class="content has-text-justified">
+            <p>
+              LEGO discovers the complete 3D hierarchical structure implicit in multi-view 2D masks by clustering them based on spatial co-visibility and 3D scale, 
+              assigning each mask to its corresponding view-consistent level.
+              This level-based paradigm provides natively consistent supervision, effortlessly parsing the scene into stable semantic tiers.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <div class="colum">
           <h2 class="title is-3">Pipeline</h2>
   
-          <img src="./static/images/pipeline.png" alt="Pipeline" width="100%">
+          <img src="./static/images/pipeline_v2.jpg" alt="Pipeline" width="100%">
           <br>
           <br>
           <div class="content has-text-justified">
             <p>
-              <strong>GAGS pipeline.</strong> Given a set of images with camera poses, GAGS first uses 3D Gaussian Splatting to reconstruct the scene's geometric representation, 
-              then utilizes it for granularity-aware segmentation and CLIP feature distillation. The finally output 3D feature field supports open-vocabulary queries.
+              LEGO first lifts multiview SAM masks into a 3D coherent scale space to assign them view-consistent structural levels. 
+              Guided by these level-masks, a hierarchical contrastive distillation process optimizes the decoupled identity features of the Gaussian field, 
+              effectively parsing the scene into stable structural tiers.
             </p>
-          </div>
-
-          <br>
-          <br>
-
-          <img src="./static/images/sample_methodv2.png" alt="Pipeline" width="100%">
-          <br>
-          <br>
-          <div class="content has-text-justified">
             <p>
-              <strong>Granularity-aware segmentation.</strong> For each input image, our method calculates the number of prompt points for each patch, 
-              converts the local Gaussian density into a discrete probability distribution to guide prompt point sampling, 
-              and further directs SAM to generate multi-view consistent masks.
-            </p>
-          </div>
-
-          <br>
-          <br>
-
-          <img src="./static/images/intro_3_v5.png" alt="Pipeline" width="100%">
-          <br>
-          <br>
-          <div class="content has-text-justified">
-            <p>
-              <strong>Granularity-aware distillation.</strong> leveraging the inherent consistency of 3D Gaussian splatting, 
-              Our method performs granularity-aware feature distillation, 
-              enhancing the stability and accuracy of learned object features
+              Building upon this robust 3D hierarchy, LEGO bridges the gap between 3D structures and natural language. 
+              By grounding these hierarchical segments with CLIP embeddings, our method seamlessly recovers open-vocabulary semantic logic across all structural levels. 
+              Furthermore, by incorporating spatial relationships, we elevate these discrete segments into level-wise language scene graphs. 
+              This structured representation effectively empowers Large Language Model (LLM) agents to perform complex, 
+              context-aware spatial reasoning and precise 3D visual grounding.
             </p>
           </div>
 
@@ -400,18 +348,19 @@
 
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Visualization</h2>
+        <h2 class="title is-3">Applications</h2>
+
+        <h3 class="title is-4" style="text-align: center;">Automatic Scene Decomposition</h3>
         
         <div class="colum">
 
-          <img src="./static/images/main_comparison_v5_1.png" alt="Visualization" width="100%">
-          <img src="./static/images/main_comparison_v5_2.png" alt="Visualization" width="100%">
+          <img src="./static/images/multi_level_seg_vis.jpg" alt="Multi-level segmentation visualization" width="100%">
           <br>
           <br>
           <div class="content has-text-justified">
             <p>
-              <strong>Relevance visualization result.</strong> GAGS encourages the distillation of multi-view consistent CLIP features into the Gaussian field, 
-              effectively reducing noise from conflicting views and significantly improving localization and segmentation tasks.
+              After feature learning, LEGO performs hierarchical segmentation through a top-down recursive clustering strategy, 
+              naturally representing the scene as a tree-structured leveled hierarchy. 
             </p>
           </div>
 
@@ -419,18 +368,48 @@
 
         <br>
         <br>
-        <div class="colum">
 
-          <img src="./static/images/ablation_full_v2_14pt.png" alt="Pipeline" width="100%">
-          <br>
-          <br>
-          <div class="content has-text-justified">
-            <p>
-              <strong>Ablation result.</strong> The proposed Granularity-aware Segmentation (<strong>GaS</strong>) can mitigate noise issues from over-segmentation of nearby objects and low-texture areas, 
-              as well as under-segmentation of distant objects, 
-              while Granularity-aware Distillation (<strong>GaD</strong>) significantly improves segmentation accuracy by learning multi-view consistent features at the appropriate granularity for each object.
-            </p>
+        <h3 class="title is-4" style="text-align: center;">Multi-Granular Open-Vocabulary Understanding</h3>
+
+        <div class="seg-vis-carousel-wrapper">
+          <div class="seg-vis-carousel" id="seg-vis-carousel">
+            <div class="seg-vis-viewport">
+              <div class="seg-vis-track">
+                <div class="seg-vis-slide">
+                  <div class="item">
+                    <img src="./static/images/main_seg_vis_1_450ppi_text_v2.jpg" alt="Segmentation visualization 1" width="100%">
+                  </div>
+                </div>
+                <div class="seg-vis-slide">
+                  <div class="item">
+                    <img src="./static/images/main_seg_vis_2_450ppi_text_v2.jpg" alt="Segmentation visualization 2" width="100%">
+                  </div>
+                </div>
+                <div class="seg-vis-slide">
+                  <div class="item">
+                    <img src="./static/images/main_seg_vis_3_450ppi_text_v2.jpg" alt="Segmentation visualization 3" width="100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-navigation-previous" aria-label="Previous slide">
+              <svg viewBox="0 0 50 80" xml:space="preserve">
+                <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 "></polyline>
+              </svg>
+            </div>
+            <div class="slider-navigation-next" aria-label="Next slide">
+              <svg viewBox="0 0 50 80" xml:space="preserve">
+                <polyline fill="currentColor" stroke-width=".5em" stroke-linecap="round" stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 "></polyline>
+              </svg>
+            </div>
           </div>
+        </div>
+
+        <br>
+        <div class="content has-text-justified">
+          <p>
+            By attaching these hierarchical segments with CLIP embeddings, LEGO seamlessly enables precise 3D visual grounding at any granularity.
+          </p>
         </div>
 
       </div>
@@ -439,8 +418,7 @@
   </div>
 </section>
 
-
-
+<!--
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
@@ -465,6 +443,7 @@
     </div>
   </div>
 </section>
+-->
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -479,10 +458,10 @@
             This research was inspired by several outstanding works.
           </p>
           <p>
-            <a href="https://langsplat.github.io/">Langsplat</a> is the first to integrate multi-level language features into 3D Gaussian representations, advancing multi-scale language understanding.
+            <a href="https://www.garfield.studio">GARField</a> and <a href="https://jumpat.github.io/SAGA/">SAGA</a> explored hierarchical decomposition in radiance fields, providing inspiration and a starting point for this work. We thank these outstanding contributions from the community.
           </p>
           <p>
-            <a href="https://feature-3dgs.github.io/">Feature 3DGS</a> and <a href="https://github.com/nerfstudio-project/gsplat?tab=readme-ov-file">gsplat</a> developed accessible 3D Gaussian rendering frameworks, significantly simplifying the representation and rendering of 3D language features in scenes.
+            <a href="https://github.com/nerfstudio-project/gsplat?tab=readme-ov-file">gsplat</a> developed accessible 3D Gaussian rendering frameworks, significantly simplifying the representation and rendering of 3D language features in scenes.
           </p>
           
         </div>
@@ -494,6 +473,7 @@
 </section>
 
 
+<!--
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -505,6 +485,7 @@
 }</code></pre>
   </div>
 </section>
+-->
 
 
 <footer class="footer">

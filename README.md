@@ -1,4 +1,4 @@
 
-# GAGS: Granularity-Aware 3D Feature Distillation for Gaussian Splatting
+# LEGO: Leveled Language Gaussian Splatting
 
-project page: https://pz0826.github.io/GAGS-Webpage/
+project page: https://pz0826.github.io/LEGO-Webpage/

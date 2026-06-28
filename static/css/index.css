@@ -27,8 +27,26 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
+.teaser video {
+  width: 100%;
+  display: block;
+  margin-bottom: 0.75em;
+}
+
 
 .publication-title {
+    font-family: 'Google Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 0.1em;
+}
+
+.publication-title-logo {
+    height: 0.9em;
+    width: auto;
+    vertical-align: middle;
 }
 
 .publication-banner {
@@ -45,10 +63,6 @@ body {
 }
 
 .publication-header .hero-body {
-}
-
-.publication-title {
-    font-family: 'Google Sans', sans-serif;
 }
 
 .publication-authors {
@@ -110,6 +124,21 @@ body {
 .publication-body img {
 }
 
+.section .column.is-full-width {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.section .columns > .column {
+  min-width: 0;
+}
+
+.section img {
+  max-width: 100%;
+  height: auto;
+}
+
 .results-carousel {
   overflow: hidden;
 }
@@ -123,8 +152,90 @@ body {
   font-size: 0;
 }
 
-.results-carousel video {
+.results-carousel video,
+.results-carousel img {
   margin: 0;
+  width: 100%;
+  display: block;
+}
+
+.seg-vis-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: visible;
+}
+
+.seg-vis-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.seg-vis-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.seg-vis-track {
+  display: flex;
+  transition: transform 300ms ease;
+  will-change: transform;
+}
+
+.seg-vis-slide {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.seg-vis-carousel .slider-navigation-previous,
+.seg-vis-carousel .slider-navigation-next {
+  z-index: 30;
+  cursor: pointer;
+}
+
+.seg-vis-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.seg-vis-carousel img {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media screen and (min-width: 769px) {
+  .seg-vis-carousel .slider-navigation-previous {
+    left: -3.25rem;
+  }
+
+  .seg-vis-carousel .slider-navigation-next {
+    right: -3.25rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .seg-vis-carousel .slider-navigation-previous {
+    left: 0.5rem;
+  }
+
+  .seg-vis-carousel .slider-navigation-next {
+    right: 0.5rem;
+  }
 }
 
 

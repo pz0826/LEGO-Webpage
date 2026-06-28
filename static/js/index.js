@@ -20,6 +20,35 @@ function setInterpolationImage(i) {
 }
 
 
+function initSegVisCarousel() {
+  var root = document.getElementById('seg-vis-carousel');
+  if (!root) return;
+
+  var track = root.querySelector('.seg-vis-track');
+  var slides = root.querySelectorAll('.seg-vis-slide');
+  var prev = root.querySelector('.slider-navigation-previous');
+  var next = root.querySelector('.slider-navigation-next');
+  var index = 0;
+
+  function update() {
+    track.style.transform = 'translate3d(' + (-index * 100) + '%, 0, 0)';
+  }
+
+  prev.addEventListener('click', function() {
+    index = (index - 1 + slides.length) % slides.length;
+    update();
+  });
+
+  next.addEventListener('click', function() {
+    index = (index + 1) % slides.length;
+    update();
+  });
+
+  window.addEventListener('resize', update);
+  update();
+}
+
+
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
     $(".navbar-burger").click(function() {
@@ -29,7 +58,7 @@ $(document).ready(function() {
 
     });
 
-    var options = {
+    var carouselOptions = {
 			slidesToScroll: 1,
 			slidesToShow: 3,
 			loop: true,
@@ -38,25 +67,8 @@ $(document).ready(function() {
 			autoplaySpeed: 3000,
     }
 
-		// Initialize all div with carousel class
-    var carousels = bulmaCarousel.attach('.carousel', options);
-
-    // Loop on each carousel initialized
-    for(var i = 0; i < carousels.length; i++) {
-    	// Add listener to  event
-    	carousels[i].on('before:show', state => {
-    		console.log(state);
-    	});
-    }
-
-    // Access to bulmaCarousel instance of an element
-    var element = document.querySelector('#my-element');
-    if (element && element.bulmaCarousel) {
-    	// bulmaCarousel instance is available as element.bulmaCarousel
-    	element.bulmaCarousel.on('before-show', function(state) {
-    		console.log(state);
-    	});
-    }
+		bulmaCarousel.attach('.results-carousel', carouselOptions);
+		initSegVisCarousel();
 
     /*var player = document.getElementById('interpolation-video');
     player.addEventListener('loadedmetadata', function() {
